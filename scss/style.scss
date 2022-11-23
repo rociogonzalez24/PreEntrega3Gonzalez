@@ -1,0 +1,30 @@
+$beige_color:#ffcc99;
+$green_color:#99ff66;
+$shadow_duration: 0.5s;
+
+body{
+    background-color: $beige_color;
+}
+
+.btn-cab{
+    background-color:$green_color;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.btn-cab:hover{
+    background-color: $green_color;
+    opacity: 1;
+}
+
+.hover-pointer{
+    cursor:default;
+}
+
+.efecto-sombra{
+    transition: box-shadow $shadow_duration;
+}
+
+.efecto-sombra:hover{
+    box-shadow: 2px 2px;
+}
