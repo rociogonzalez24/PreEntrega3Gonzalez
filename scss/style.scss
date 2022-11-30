@@ -1,5 +1,7 @@
-$beige_color:#ffcc99;
-$green_color:#99ff66;
+@import "colores";
+@import "tamanos";
+@import "mapeos";
+
 $shadow_duration: 0.5s;
 
 body{
@@ -10,11 +12,10 @@ body{
     background-color:$green_color;
     font-weight: bold;
     opacity: 0.8;
-}
-
-.btn-cab:hover{
-    background-color: $green_color;
-    opacity: 1;
+    &:hover{
+        background-color: $green_color;
+        opacity: 1;
+    }
 }
 
 .hover-pointer{
@@ -23,8 +24,56 @@ body{
 
 .efecto-sombra{
     transition: box-shadow $shadow_duration;
+    &:hover{
+        box-shadow: $shadow_box_prop;
+    }
 }
 
-.efecto-sombra:hover{
-    box-shadow: 2px 2px;
+.numero-especial{
+    color:$purple_color;
+    font-weight: bold;
+}
+
+.infografia{
+    text-align: left;
+    background-color: $beige_dark_color;
+}
+
+.testimonios{
+    background-color: $lightblue_color;
+}
+
+.lista-detalles{
+    list-style: none;
+
+    li{
+        font-size: $font_size_base;
+        padding: $padding_topbottom;
+    }
+}
+
+
+@for $i from 1 to 3{
+    .texto-avanzado-#{$i}{
+        font-weight: bold;
+    }
+}
+
+.texto-avanzado-1{
+    color:$blueish_color;
+}
+
+.texto-avanzado-2{
+    color:$golden_color;
+}
+
+.copyright{
+    font-size: $font_large;
+    font-style: italic;
+}
+
+@each $red,$color in $redes_sociales {
+    .btn-#{$red}{
+        background-color:$color;
+    }
 }
